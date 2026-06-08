@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teacher — Iris E-Campus</title>
+<link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <img src="assets/img/logo.png" style="width:120px" alt="Iris Tutors Logo">
+      <div class="nav-item">Dashboard</div>
+      <div class="nav-item">Upload Resource</div>
+      <div class="nav-item">Announcements</div>
+      <div class="nav-item">Manage Resources</div>
+      <div class="nav-item">Marks</div>
+    </aside>
+    <main class="main">
+      <header class="flex" style="justify-content:space-between">
+        <h2>Teacher Dashboard</h2>
+        <div class="flex">
+          <div class="pill" id="teacherName">Teacher</div>
+          <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+      </header>
+
+      <section style="margin-top:1rem">
+        <div class="card">
+          <h3>Upload Resource</h3>
+          <form id="uploadForm">
+            <label>Title <input id="resTitle" required></label>
+            <label>Description <textarea id="resDesc"></textarea></label>
+            <label>Subject <select id="resSubject"></select></label>
+            <label>File <input type="file" id="resFile" required></label>
+            <div class="flex" style="margin-top:0.6rem">
+              <button class="btn primary" type="submit">Upload</button>
+              <div id="uploadProgress" style="margin-left:1rem"></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h3>Manage Marks</h3>
+          <label>Subject <select id="marksSubject"><option value="">Select subject</option></select></label>
+          <div id="marksSection"></div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/teacher.js"></script>
+</body>
+</html>

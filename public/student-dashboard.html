@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student — Iris E-Campus</title>
+<link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <img src="assets/img/logo.png" style="width:120px" alt="Iris Tutors Logo">
+      <div class="nav-item">Subjects</div>
+      <div class="nav-item">Resources</div>
+      <div class="nav-item">Announcements</div>
+      <div class="nav-item">Timetable</div>
+      <div class="nav-item">E-Report</div>
+    </aside>
+    <main class="main">
+      <header class="flex" style="justify-content:space-between">
+        <h2>Student Dashboard</h2>
+        <div class="flex">
+          <div class="pill" id="studentName">Student</div>
+          <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+      </header>
+
+      <section style="margin-top:1rem">
+        <div class="card">
+          <div class="flex" style="justify-content:space-between">
+            <input type="search" id="searchBar" placeholder="Search resources...">
+            <select id="filterSubject"><option value="">All subjects</option></select>
+            <select id="filterType"><option value="">All types</option><option value="video">Video</option><option value="pdf">PDF</option></select>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem" class="grid">
+          <div class="card">
+            <h3>Your Progress</h3>
+            <div id="progressList"></div>
+          </div>
+          <div class="card">
+            <h3>Timetable</h3>
+            <div id="timetable"></div>
+          </div>
+          <div class="card">
+            <h3>Calendar</h3>
+            <div id="calendar"></div>
+          </div>
+        </div>
+
+        <section style="margin-top:1rem">
+          <h3>Resources</h3>
+          <div id="resourceGrid" class="grid" style="margin-top:1rem"></div>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>E-Report Card</h3>
+          <div id="ereport"></div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/student.js"></script>
+</body>
+</html>
